@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practice 1</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+      .same-border,
+      .listitem {
+        border-radius: 30px;
+      }
+      body {
+        background-color: rgb(186, 186, 186);
+        border-radius: 20px;
+      }
+      nav {
+        background-color: #828282;
+        margin-bottom: 2rem;
+        padding: 1rem;
+      }
+      nav ul {
+        list-style: none;
+      }
+      .container-list {
+        display: flex;
+        justify-content: right;
+      }
+      .listitem {
+        margin: 0 1rem;
+        width: 7rem;
+        height: 4rem;
+        background-color: #717171;
+        justify-content: flex-end;
+      }
+      .container {
+        display: flex;
+        margin-bottom: 2rem;
+      }
+      .item {
+      }
+      .left {
+        background-color: #828282;
+        height: 400px;
+        flex-grow: 1.5;
+        margin-right: 1rem;
+        padding: 2rem;
+        color: white;
+      }
+      .right {
+        background-color: #828282;
+        flex-grow: 4;
+        margin-left: 1.5rem;
+        height: 400px;
+      }
+
+      footer {
+        height: 3rem;
+        background-color: #828282;
+      }
+
+      @media only screen and (max-width: 768px) {
+        .container {
+          flex-direction: column;
+        }
+        .left,
+        .right {
+          margin: 0;
+          flex-grow: 0;
+        }
+        .left {
+          margin-bottom: 1.5rem;
+        }
+      }
+      @media only screen and (min-width: 768px) {
+        .left,
+        .right {
+          flex-grow: 1;
+        }
+      }
+      @media only screen and (min-width: 992px) {
+        .left {
+          flex-grow: 1;
+        }
+        .right {
+          flex-grow: 4;
+        }
+      }
+      #all {
+        padding: 3rem;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div id="all">
+      <nav class="same-border">
+        <ul class="container-list">
+          <li class="listitem"></li>
+          <li class="listitem"></li>
+          <li class="listitem"></li>
+        </ul>
+      </nav>
+      <div class="container">
+        <div class="left same-border">Resize the window to see the Responsive design in action </div>
+        <div class="right same-border"></div>
+      </div>
+      <footer class="same-border"></footer>
+    </div>
+  </body>
+</html>
